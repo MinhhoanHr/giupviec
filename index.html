@@ -1,69 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <img src="https://via.placeholder.com/800x300" style="width:100%">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dịch vụ giúp việc uy tín</title>
 
-<div class="box">
-    <h2>Cam kết dịch vụ</h2>
-    <p>✔ Có sẵn người đi làm ngay</p>
-    <p>✔ Hồ sơ rõ ràng</p>
-    <p>✔ Hỗ trợ đổi người</p>
-</div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dịch vụ giúp việc uy tín</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-        }
-        header {
-            background: #0d6efd;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        .box {
-            background: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            background: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+/* Banner */
+header {
+    background: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') no-repeat center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+header h1 {
+    font-size: 36px;
+}
+
+/* Layout */
+.container {
+    padding: 20px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.hotline {
+    font-size: 26px;
+    color: red;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Form */
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Dịch vụ giúp việc</h1>
-    <p>Uy tín - Nhanh chóng - Giá hợp lý</p>
+    <h1>Cung cấp người hỗ trợ gia đình</h1>
+    <p>Có sẵn người - Hỗ trợ nhanh - Linh hoạt theo nhu cầu</p>
 </header>
-   
 
-<section>
+<div class="container">
+
     <div class="box">
-        <h2>Dịch vụ của chúng tôi</h2>
-        <p>Cung cấp người giúp việc nhà, chăm em bé, chăm người già.</p>
+        <h2>Dịch vụ</h2>
+        <p>✔ Hỗ trợ việc nhà</p>
+        <p>✔ Hỗ trợ chăm trẻ</p>
+        <p>✔ Hỗ trợ chăm người lớn tuổi</p>
     </div>
 
     <div class="box">
-        <h2>Liên hệ ngay</h2>
-        <p>Hotline: 0396358431</p>
+        <h2>Hình ảnh thực tế</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+            <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17">
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Cam kết</h2>
+        <p>✔ Có người phù hợp nhanh</p>
+        <p>✔ Thông tin rõ ràng</p>
+        <p>✔ Hỗ trợ thay đổi khi cần</p>
+    </div>
+
+    <!-- FORM LẤY DATA (chạy ads rất quan trọng) -->
+    <div class="box">
+        <h2>Đăng ký tư vấn nhanh</h2>
+        <input type="text" placeholder="Tên của bạn">
+        <input type="tel" placeholder="Số điện thoại">
+        <button onclick="alert('Chúng tôi sẽ liên hệ sớm!')">
+            Gửi thông tin
+        </button>
+    </div>
+
+    <div class="box">
+        <h2>Liên hệ trực tiếp</h2>
+        <p class="hotline">🔥 0396358431</p>
         <a href="tel:0396358431" class="btn">Gọi ngay</a>
     </div>
-</section>
+
+</div>
+
+<!-- ZALO FLOAT -->
+<a href="https://zalo.me/0396358431"
+style="position:fixed;bottom:20px;right:20px;
+background:#0084ff;color:white;padding:14px 16px;
+border-radius:50px;text-decoration:none;">
+Zalo
+</a>
 
 </body>
 </html>
