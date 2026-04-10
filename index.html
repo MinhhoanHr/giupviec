@@ -95,47 +95,6 @@ src="// META PIXEL ID"
     <title>Test Form</title>
 </head>
 <body>
-
-<form id="formKhach">
-    <input name="ten" placeholder="Tên" required>
-    <input name="sdt" placeholder="SĐT" required>
-
-    <select name="dichvu">
-        <option>Test DV</option>
-    </select>
-
-    <textarea name="nhucau"></textarea>
-
-    <button type="submit">Gửi thông tin</button>
-</form>
-
-<script>
-document.getElementById("formKhach").addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    alert("ĐÃ BẤM NÚT");
-
-    const formData = new FormData(this);
-
-    try {
-        let res = await fetch(
-        "https://script.google.com/macros/s/AKfycbwKG0knKhpba5h2EqeHNuZypwsrQJ1De4vkffS1pqsmGP2JSljin70jWvjBPQBWMTQM/exec",
-        {
-            method: "POST",
-            body: formData
-        });
-
-        let text = await res.text();
-
-        alert(text);
-
-    } catch(err){
-        alert("Lỗi: " + err);
-    }
-});
-</script>
-
-</body>
 </html>
      <script>
 document.getElementById("formKhach").addEventListener("submit", async function(e) {
