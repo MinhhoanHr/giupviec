@@ -128,16 +128,32 @@ src="// META PIXEL ID"
 document.getElementById("formKhach").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const formData = new FormData(this);
+    const formData = new FormData();
 
-    await fetch("https://script.google.com/macros/s/AKfycbzPgtcGmaJL02fyQsPHgiJ8GiysJxP_GU-YzvoGYCNS2MLzWSw6QjZaRmZw0jRKAdtF/exec", {
-        method: "POST",
-        body: formData
-    });
+    formData.append("ten", document.querySelector('[name="ten"]').value);
+    formData.append("sdt", document.querySelector('[name="sdt"]').value);
+    formData.append("dichvu", document.querySelector('[name="dichvu"]').value);
+    formData.append("nhucau", document.querySelector('[name="nhucau"]').value);
 
-    alert("OK");
-    this.reset();
+    try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwKG0knKhpba5h2EqeHNuZypwsrQJ1De4vkffS1pqsmGP2JSljin70jWvjBPQBWMTQM/exec", {
+            method: "POST",
+            body: formData
+        });
+
+        const text = await response.text();
+
+        alert("Gửi thành công!");
+        console.log(text);
+
+        document.getElementById("formKhach").reset();
+
+    } catch(err) {
+        alert("Lỗi gửi form");
+        console.log(err);
+    }
 });
+</script>
 </script>
 </body>
 <form id="formKhach">
