@@ -59,6 +59,9 @@ button{
     width:100%;
     cursor:pointer;
 }
+button:hover{
+    background:#c62828;
+}
 footer{
     background:#0b3d91;
     color:white;
@@ -113,7 +116,7 @@ footer{
 <input name="ten" placeholder="Họ và tên" required>
 <input name="sdt" placeholder="Số điện thoại" required>
 
-<select name="dichvu">
+<select name="dichvu" required>
 <option value="">Chọn dịch vụ</option>
 <option>Giúp việc theo giờ</option>
 <option>Giúp việc ở lại</option>
@@ -149,9 +152,10 @@ document.getElementById("formKhach").addEventListener("submit", async function(e
     const formData = new FormData(this);
 
     try{
-        const response = await fetch("https://script.google.com/macros/s/AKfycbwKG0knKhpba5h2EqeHNuZypwsrQJ1De4vkffS1pqsmGP2JSljin70jWvjBPQBWMTQM/exec",{
+        await fetch("https://script.google.com/macros/s/AKfycbwKG0knKhpba5h2EqeHNuZypwsrQJ1De4vkffS1pqsmGP2JSljin70jWvjBPQBWMTQM/exec",{
             method:"POST",
-            body:formData
+            body:formData,
+            mode:"no-cors"
         });
 
         alert("Gửi thành công!");
@@ -166,8 +170,3 @@ document.getElementById("formKhach").addEventListener("submit", async function(e
 
 </body>
 </html>
-<a href="https://zalo.me/0396358431" target="_blank">
-  <img src="https://stc-zaloprofile.zdn.vn/pc/v1/images/logo.svg" 
-       alt="Chat Zalo" 
-       width="50">
-</a>
