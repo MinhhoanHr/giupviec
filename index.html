@@ -124,6 +124,21 @@ src="// META PIXEL ID"
 
 <div class="box">
 <h2>📩 Đăng ký ngay</h2>
+  </form>
+    <script>
+document.getElementById("formKhach").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    await fetch("https://script.google.com/macros/s/AKfycbyrS5qRzrWMKiDN1t9cxeiIlGGmHwefvO0zl2d1gwt2FTWVmtz2DG-tXtOLJpJ_Kcx4/exec", {
+        method: "POST",
+        body: formData
+    });
+
+    alert("Gửi thành công!");
+    this.reset();
+});
 
 </body>
 <form id="formKhach">
@@ -139,21 +154,6 @@ src="// META PIXEL ID"
 <textarea name="nhucau" placeholder="Mô tả nhu cầu"></textarea>
 
 <button type="submit">Gửi thông tin</button>
-</form>
-     <script>
-document.getElementById("formKhach").addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(this);
-
-    await fetch("https://script.google.com/macros/s/AKfycbyrS5qRzrWMKiDN1t9cxeiIlGGmHwefvO0zl2d1gwt2FTWVmtz2DG-tXtOLJpJ_Kcx4/exec", {
-        method: "POST",
-        body: formData
-    });
-
-    alert("Gửi thành công!");
-    this.reset();
-});
 </script>
 
 <p id="tb"></p>
