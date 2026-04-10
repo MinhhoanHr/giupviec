@@ -5,74 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dịch Vụ Giúp Việc Uy Tín</title>
 
+<!-- 🔥 META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'PIXEL_ID_CUA_M');
+fbq('track', 'PageView');
+</script>
+
 <style>
-body{
-    margin:0;
-    font-family:Arial;
-    background:#f4f6f9;
-}
-header{
-    background:#0b3d91;
-    color:white;
-    padding:15px;
-    text-align:center;
-}
+body{margin:0;font-family:Arial;background:#f4f6f9;}
+header{background:#0b3d91;color:white;padding:15px;text-align:center;}
 .banner{
     background:url('https://69d8a0ebedd01a7285282b5c.imgix.net/logoo.jpg?auto=format&fit=fill&w=384') center/cover;
-    height:280px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:blue;
+    height:280px;display:flex;align-items:center;justify-content:center;
 }
-.banner h1{
-    background:rgba(0,0,0,0.5);
-    padding:15px;
-    border-radius:8px;
-}
-.container{
-    padding:20px;
-}
+.container{padding:20px;}
 .box{
-    background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background:white;padding:20px;margin-bottom:20px;
+    border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-h2{
-    color:#0b3d91;
-}
+h2{color:#0b3d91;}
 input,textarea,select{
-    width:100%;
-    padding:10px;
-    margin-bottom:10px;
-    border-radius:5px;
-    border:1px solid #ccc;
+    width:100%;padding:10px;margin-bottom:10px;
+    border-radius:5px;border:1px solid #ccc;
 }
 button{
-    background:#e53935;
-    color:white;
-    padding:12px;
-    border:none;
-    border-radius:6px;
-    width:100%;
-    cursor:pointer;
+    background:#e53935;color:white;padding:12px;
+    border:none;border-radius:6px;width:100%;cursor:pointer;
 }
-button:hover{
-    background:#c62828;
-}
-footer{
-    background:#0b3d91;
-    color:white;
-    text-align:center;
-    padding:15px;
-}
-.zalo-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-}
+footer{background:#0b3d91;color:white;text-align:center;padding:15px;}
+.zalo-btn{position:fixed;bottom:20px;right:20px;}
 </style>
 </head>
 
@@ -84,8 +61,7 @@ footer{
 <p>Minh Hoàn Hr</p>    
 </header>
 
-<div class="banner">
-</div>
+<div class="banner"></div>
 
 <div class="container">
 
@@ -93,20 +69,10 @@ footer{
 <h2>📌 Dịch vụ</h2>
 <ul>
 <li>Giúp việc nhà theo giờ</li>
-<li>Giúp việc nhà bao ăn ở lại</li>
-<li>Chăm bé sơ sinh -> lớn</li>
+<li>Giúp việc ở lại</li>
+<li>Chăm bé</li>
 <li>Chăm ông bà</li>
-<li>Chăm trong bệnh viện</li>
-</ul>
-</div>
-
-<div class="box">
-<h2>✅ Cam kết</h2>
-<ul>
-<li>Người làm có nhiều năm kinh nghiệm,đã sàng lọc kỹ hồ sơ</li>
-<li>Lý lịch rõ ràng,đầy đủ thông tin,bảo mật tuyệt đối</li>
-<li>Đổi người miễn phí,không giới hạn trong 45 ngày</li>
-<li>Hỗ trợ 24/7</li>
+<li>Chăm bệnh viện</li>
 </ul>
 </div>
 
@@ -119,15 +85,12 @@ footer{
 
 <select name="dichvu" required>
 <option value="">Chọn dịch vụ</option>
-<option>Giúp việc làm về</option>
-<option>Giúp việc toàn thời gian</option>
+<option>Giúp việc</option>
 <option>Chăm bé</option>
-<option>Chăm ông bà đi lại được</option>
-<option>Chăm ông bà không đi lại được</option>
-<option>Chăm trong bệnh viện</option>
+<option>Chăm ông bà</option>
 </select>
 
-<textarea name="nhucau" placeholder="Mô tả nhu cầu chi tiết"></textarea>
+<textarea name="nhucau" placeholder="Nhu cầu"></textarea>
 
 <button type="submit">Gửi thông tin</button>
 </form>
@@ -137,31 +100,8 @@ footer{
 </div>
 
 <footer>
-📞 Hotline: 0396.358.431 (Zalo)
-<br>
-© 2026 Cung Cấp Các Cô Giúp Việc Uy Tín Toàn Quốc
-<br>
-Địa chỉ: 220/58 Xô Viết Nghệ Tĩnh, P.19, Q.Bình Thạnh
+📞 Hotline: 0396.358.431  
 </footer>
-    <footer class="footer">
-    <p>Theo dõi chúng tôi tại:</p>
-    
-    <a href="https://www.facebook.com/Minhhoancungungviec/" target="_blue">
-        Fanpage Facebook
-    </a>
-</footer>
-
-<div class="floating-contact">
-
-    <a href="https://zalo.me/0396358431" target="_blank" class="zalo-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
-    </a>
-
-    <a href="tel:0396358431" class="call-btn">
-        📞
-    </a>
-
-</div>
 
 <script>
 document.getElementById("formKhach").addEventListener("submit", async function(e){
@@ -178,8 +118,8 @@ document.getElementById("formKhach").addEventListener("submit", async function(e
         const text = await res.text();
 
         if(text=="Success"){
-            alert("Gửi thành công!");
-            this.reset();
+            // 🔥 CHUYỂN TRANG
+            window.location.href = "cam-on.html";
         }else{
             alert("Gửi thất bại!");
         }
