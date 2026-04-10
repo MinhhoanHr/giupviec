@@ -1,55 +1,88 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Cảm ơn</title>
+  <script>
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+  <h2>Cảm ơn bạn đã gửi thông tin!</h2>
+</body>
+</html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dịch Vụ Giúp Việc Uy Tín</title>
-
-<!-- 🔥 META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;
-n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s);
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', 'PIXEL_ID_CUA_M');
-fbq('track', 'PageView');
-</script>
-
 <style>
-body{margin:0;font-family:Arial;background:#f4f6f9;}
-header{background:#0b3d91;color:white;padding:15px;text-align:center;}
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f4f6f9;
+}
+header{
+    background:#0b3d91;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
 .banner{
     background:url('https://69d8a0ebedd01a7285282b5c.imgix.net/logoo.jpg?auto=format&fit=fill&w=384') center/cover;
-    height:280px;display:flex;align-items:center;justify-content:center;
+    height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:blue;
 }
-.container{padding:20px;}
+.banner h1{
+    background:rgba(0,0,0,0.5);
+    padding:15px;
+    border-radius:8px;
+}
+.container{
+    padding:20px;
+}
 .box{
-    background:white;padding:20px;margin-bottom:20px;
-    border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-h2{color:#0b3d91;}
+h2{
+    color:#0b3d91;
+}
 input,textarea,select{
-    width:100%;padding:10px;margin-bottom:10px;
-    border-radius:5px;border:1px solid #ccc;
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
 }
 button{
-    background:#e53935;color:white;padding:12px;
-    border:none;border-radius:6px;width:100%;cursor:pointer;
+    background:#e53935;
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    width:100%;
+    cursor:pointer;
 }
-footer{background:#0b3d91;color:white;text-align:center;padding:15px;}
-.zalo-btn{position:fixed;bottom:20px;right:20px;}
+button:hover{
+    background:#c62828;
+}
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+.zalo-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
 </style>
 </head>
 
@@ -61,7 +94,8 @@ footer{background:#0b3d91;color:white;text-align:center;padding:15px;}
 <p>Minh Hoàn Hr</p>    
 </header>
 
-<div class="banner"></div>
+<div class="banner">
+</div>
 
 <div class="container">
 
@@ -69,10 +103,20 @@ footer{background:#0b3d91;color:white;text-align:center;padding:15px;}
 <h2>📌 Dịch vụ</h2>
 <ul>
 <li>Giúp việc nhà theo giờ</li>
-<li>Giúp việc ở lại</li>
-<li>Chăm bé</li>
+<li>Giúp việc nhà bao ăn ở lại</li>
+<li>Chăm bé sơ sinh -> lớn</li>
 <li>Chăm ông bà</li>
-<li>Chăm bệnh viện</li>
+<li>Chăm trong bệnh viện</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>✅ Cam kết</h2>
+<ul>
+<li>Người làm có nhiều năm kinh nghiệm,đã sàng lọc kỹ hồ sơ</li>
+<li>Lý lịch rõ ràng,đầy đủ thông tin,bảo mật tuyệt đối</li>
+<li>Đổi người miễn phí,không giới hạn trong 45 ngày</li>
+<li>Hỗ trợ 24/7</li>
 </ul>
 </div>
 
@@ -85,12 +129,15 @@ footer{background:#0b3d91;color:white;text-align:center;padding:15px;}
 
 <select name="dichvu" required>
 <option value="">Chọn dịch vụ</option>
-<option>Giúp việc</option>
+<option>Giúp việc làm về</option>
+<option>Giúp việc toàn thời gian</option>
 <option>Chăm bé</option>
-<option>Chăm ông bà</option>
+<option>Chăm ông bà đi lại được</option>
+<option>Chăm ông bà không đi lại được</option>
+<option>Chăm trong bệnh viện</option>
 </select>
 
-<textarea name="nhucau" placeholder="Nhu cầu"></textarea>
+<textarea name="nhucau" placeholder="Mô tả nhu cầu chi tiết"></textarea>
 
 <button type="submit">Gửi thông tin</button>
 </form>
@@ -100,36 +147,3 @@ footer{background:#0b3d91;color:white;text-align:center;padding:15px;}
 </div>
 
 <footer>
-📞 Hotline: 0396.358.431  
-</footer>
-
-<script>
-document.getElementById("formKhach").addEventListener("submit", async function(e){
-    e.preventDefault();
-
-    const formData = new FormData(this);
-
-    try{
-        const res = await fetch("https://script.google.com/macros/s/AKfycbwfzyR__OeuxfrJ6L8JlAKSiZ-Os0lykT6J-Zf0nAu8zEtekra-RLP4Q7XToliw51l0/exec",{
-            method:"POST",
-            body:formData
-        });
-
-        const text = await res.text();
-
-        if(text=="Success"){
-            // 🔥 CHUYỂN TRANG
-            window.location.href = "cam-on.html";
-        }else{
-            alert("Gửi thất bại!");
-        }
-
-    }catch(err){
-        alert("Lỗi gửi form!");
-        console.log(err);
-    }
-});
-</script>
-
-</body>
-</html>
