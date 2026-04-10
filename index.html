@@ -152,14 +152,19 @@ document.getElementById("formKhach").addEventListener("submit", async function(e
     const formData = new FormData(this);
 
     try{
-        await fetch("https://script.google.com/macros/s/AKfycbyb9_hSgR5QgUbIr2bnrCc2A6CJatBjkCOFAMov9XVf5mwb5ieiAsWWfdhshxu8CV8/exec",{
+        const res = await fetch("https://script.google.com/macros/s/AKfycbwfzyR__OeuxfrJ6L8JlAKSiZ-Os0lykT6J-Zf0nAu8zEtekra-RLP4Q7XToliw51l0/exec",{
             method:"POST",
-            body:formData,
-            mode:"no-cors"
+            body:formData
         });
 
-        alert("Gửi thành công!");
-        this.reset();
+        const text = await res.text();
+
+        if(text=="Success"){
+            alert("Gửi thành công!");
+            this.reset();
+        }else{
+            alert("Gửi thất bại!");
+        }
 
     }catch(err){
         alert("Lỗi gửi form!");
