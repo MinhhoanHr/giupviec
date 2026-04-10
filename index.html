@@ -82,7 +82,7 @@ fbq('init', '1705239330843644');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1705239330843644&ev=PageView&noscript=1"
+src="// META PIXEL ID"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </script>
@@ -124,7 +124,7 @@ src="https://www.facebook.com/tr?id=1705239330843644&ev=PageView&noscript=1"
 
 <div class="box">
 <h2>📩 Đăng ký ngay</h2>
- <form action="https://script.google.com/macros/s/AKfycbzq8uxyOgcI7XjIKAKwdgDoIIpKl54ATpqByJYlQknlm2NVjymmM8ve5HGRajdLU_qH/exec" method="POST">
+
 </body>
 <form id="formKhach">
 <input name="ten" placeholder="Họ và tên" required>
@@ -140,6 +140,21 @@ src="https://www.facebook.com/tr?id=1705239330843644&ev=PageView&noscript=1"
 
 <button type="submit">Gửi thông tin</button>
 </form>
+     <script>
+document.getElementById("formKhach").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    await fetch("https://script.google.com/macros/s/AKfycbyrS5qRzrWMKiDN1t9cxeiIlGGmHwefvO0zl2d1gwt2FTWVmtz2DG-tXtOLJpJ_Kcx4/exec", {
+        method: "POST",
+        body: formData
+    });
+
+    alert("Gửi thành công!");
+    this.reset();
+});
+</script>
 
 <p id="tb"></p>
 
