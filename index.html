@@ -6,18 +6,18 @@
 <title>Dịch Vụ Giúp Việc Uy Tín</title>
 
 <style>
-body {
+body{
     margin:0;
-    font-family: Arial;
+    font-family:Arial;
     background:#f4f6f9;
 }
-header {
+header{
     background:#0b3d91;
     color:white;
     padding:15px;
     text-align:center;
 }
-.banner {
+.banner{
     background:url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
     height:250px;
     display:flex;
@@ -25,107 +25,55 @@ header {
     justify-content:center;
     color:white;
 }
-.banner h1 {
+.banner h1{
     background:rgba(0,0,0,0.5);
     padding:15px;
     border-radius:8px;
 }
-.container {
+.container{
     padding:20px;
 }
-.box {
+.box{
     background:white;
     padding:20px;
     margin-bottom:20px;
     border-radius:10px;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-    <h2>
-</html>
-h2 {
+h2{
     color:#0b3d91;
 }
-input, textarea, select {
+input,textarea,select{
     width:100%;
     padding:10px;
     margin-bottom:10px;
     border-radius:5px;
     border:1px solid #ccc;
 }
-button {
+button{
     background:#e53935;
     color:white;
     padding:12px;
     border:none;
     border-radius:6px;
     width:100%;
+    cursor:pointer;
 }
-footer {
+footer{
     background:#0b3d91;
     color:white;
     text-align:center;
     padding:15px;
 }
+.zalo-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
 </style>
-
-<!-- PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1705239330843644');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="// META PIXEL ID"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</script>
-
 </head>
+
 <body>
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>Test Form</title>
-</head>
-<body>
-</html>
-     <script>
-document.getElementById("formKhach").addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData();
-
-    formData.append("ten", document.querySelector('[name="ten"]').value);
-    formData.append("sdt", document.querySelector('[name="sdt"]').value);
-    formData.append("dichvu", document.querySelector('[name="dichvu"]').value);
-    formData.append("nhucau", document.querySelector('[name="nhucau"]').value);
-
-    try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbwKG0knKhpba5h2EqeHNuZypwsrQJ1De4vkffS1pqsmGP2JSljin70jWvjBPQBWMTQM/exec", {
-            method: "POST",
-            body: formData
-        });
-
-        const text = await response.text();
-
-        alert("Gửi thành công!");
-        console.log(text);
-
-        document.getElementById("formKhach").reset();
-
-    } catch(err) {
-        alert("Lỗi gửi form");
-        console.log(err);
-    }
-});
-</script>
 
 <header>
 <h1>DỊCH VỤ GIÚP VIỆC UY TÍN</h1>
@@ -160,11 +108,11 @@ document.getElementById("formKhach").addEventListener("submit", async function(e
 
 <div class="box">
 <h2>📩 Đăng ký ngay</h2>
-</script>
-</body>
+
 <form id="formKhach">
 <input name="ten" placeholder="Họ và tên" required>
 <input name="sdt" placeholder="Số điện thoại" required>
+
 <select name="dichvu">
 <option value="">Chọn dịch vụ</option>
 <option>Giúp việc theo giờ</option>
@@ -172,25 +120,49 @@ document.getElementById("formKhach").addEventListener("submit", async function(e
 <option>Chăm bé</option>
 <option>Chăm người già</option>
 </select>
+
 <textarea name="nhucau" placeholder="Mô tả nhu cầu"></textarea>
 
 <button type="submit">Gửi thông tin</button>
-</script>
-
-<p id="tb"></p>
+</form>
 
 </div>
 
 </div>
 
 <footer>
-📞 Hotline: 0396.358.431 ( Zalo )
-<br>© 2026 Cung Cấp Các Cô Giúp Việc Uy Tín Toàn Quốc
+📞 Hotline: 0396.358.431 (Zalo)
+<br>
+© 2026 Cung Cấp Các Cô Giúp Việc Uy Tín Toàn Quốc
+<br>
+Địa chỉ: 220/58 Xô Viết Nghệ Tĩnh, P.19, Q.Bình Thạnh
 </footer>
-    Địa chỉ : 220/58 Xô Viết Nghệ Tĩnh,Phường 19,Quận Bình Thạnh
+
+<a href="https://zalo.me/0396358431" target="_blank" class="zalo-btn">
+<img src="https://stc-zaloprofile.zdn.vn/pc/v1/images/logo.svg" width="50">
+</a>
 
 <script>
-</a>
+document.getElementById("formKhach").addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    try{
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwKG0knKhpba5h2EqeHNuZypwsrQJ1De4vkffS1pqsmGP2JSljin70jWvjBPQBWMTQM/exec",{
+            method:"POST",
+            body:formData
+        });
+
+        alert("Gửi thành công!");
+        this.reset();
+
+    }catch(err){
+        alert("Lỗi gửi form!");
+        console.log(err);
+    }
+});
+</script>
 
 </body>
 </html>
